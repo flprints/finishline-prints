@@ -1,0 +1,4 @@
+# PLACEHOLDER BUILD: keep this site out of search engines until launch.
+# At launch replace with: "User-agent: *\nAllow: /\n\nSitemap: https://<domain>/sitemap.xml"
+User-agent: *
+Disallow: /
