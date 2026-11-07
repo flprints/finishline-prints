@@ -1,5 +1,4 @@
-/* Client site: lean interactions (menu, nav state, reveal, year, Netlify form).
-   No client-specific text lives here. */
+/* Finishline Prints: lean interactions (menu, nav state, reveal, year, Netlify form). */
 (() => {
   'use strict';
   const $ = (s, c = document) => c.querySelector(s);
@@ -7,18 +6,13 @@
   const body = document.body;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  document.documentElement.classList.remove('no-js');
-  body.classList.add('is-ready');
-
   $$('[data-year]').forEach(el => (el.textContent = new Date().getFullYear()));
 
-  /* Nav: scrolled state */
   const nav = $('.nav');
   const onScroll = () => nav && nav.classList.toggle('is-scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* Mobile menu */
   const burger = $('.nav__burger');
   const menu = $('#menu');
   if (burger && menu) {
@@ -40,14 +34,13 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
   }
 
-  /* Reveal on scroll */
   const items = $$('.reveal');
   if (reduce || !('IntersectionObserver' in window)) {
     items.forEach(el => el.classList.add('is-in'));
   } else {
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
     items.forEach(el => {
       const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
       const i = sibs.indexOf(el);
@@ -56,7 +49,6 @@
     });
   }
 
-  /* Contact form (Netlify Forms, submitted without leaving the page) */
   const form = $('form[name="contact"]');
   if (form) {
     const status = $('.form__status', form);

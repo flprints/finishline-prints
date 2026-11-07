@@ -1,53 +1,42 @@
 /* =========================================================
-   BRAND TOKENS: the ONLY file you edit to re-colour a client site.
-   Loaded after style.css and light.css, so these values win.
-
-   Finishline Prints: colours sampled from the supplied logo
-   (olive #546030, red dot #e31e25, CMYK mark cyan/magenta/yellow/black).
-   Keep each *-rgb value equal to its hex (used for glows and shadows).
+   BRAND TOKENS: the ONLY place client colours and fonts live.
+   Finishline Prints: olive and red from the logo, CMYK mark colours,
+   plus a fresh lime accent (reference: Biztop / Axios landing pages)
+   used for buttons, highlights and the marquee strip.
    ========================================================= */
 :root {
-  /* dark neutrals (warm, taken from the logo wordmark) */
-  --ink: #262522;
-  --ink-2: #2f2e2a;
-  --ink-3: #3a3935;
+  /* dark surfaces (deep olive-black, warm like the logo wordmark) */
+  --ink: #12150d;
+  --ink-2: #1a1e13;
+  --ink-3: #242a1a;
 
-  /* brand olive, used for the gradient on buttons and gradient text */
-  --blue: #38441e;
-  --violet: #4b5a28;
-  --magenta: #5e6f33;
-  /* logo red, used for the "hot" gradient */
-  --pink: #e31e25;
-  --coral: #c2191f;
+  /* accent: lime (buttons, pills, highlights) */
+  --lime: #c8f04a;
+  --lime-2: #b2e02f;
+  --lime-soft: #eaf6bf;
 
-  --blue-rgb: 56, 68, 30;
-  --violet-rgb: 75, 90, 40;
-  --magenta-rgb: 94, 111, 51;
+  /* light surfaces */
+  --paper: #ffffff;
+  --cream: #f6f7ee;
+  --cream-2: #eceedd;
 
-  /* CMYK accents from the logo mark (small details only) */
+  /* brand colours from the logo */
+  --olive: #546030;
+  --olive-d: #38441e;
+  --red: #e31e25;
+
+  /* CMYK mark (small details only) */
   --c: #0393da;
   --m: #d71882;
   --y: #fee00c;
   --k: #333230;
-  --olive: #546030;
-  --red: #e31e25;
 
-  --lav: #f6f6f1;
-  --lav-2: #ebece3;
-  --text: #262522;
-  --muted: #5b5a54;
-  --muted-d: #c2c2b8;
-  --line: rgba(38, 37, 34, .12);
+  --text: #1b1e14;
+  --muted: #5c6050;
+  --muted-d: #b8bfa6;
+  --line: rgba(27, 30, 20, .12);
+  --line-d: rgba(255, 255, 255, .14);
 
-  /* gradient text and numbers on dark sections must be light */
-  --on-dark-1: #b4c67c;
-  --on-dark-2: #dfe9b6;
-
-  --f-display: "Barlow Condensed", "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-display: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-
-.dark .grad, .contact .grad, .footer .grad, .band .grad {
-  background-image: linear-gradient(90deg, var(--on-dark-1), var(--on-dark-2));
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
 }

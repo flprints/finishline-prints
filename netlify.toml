@@ -69,6 +69,12 @@
   force = true
 
 [[redirects]]
+  from = "/IMAGES.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/DEPLOY.md"
   to = "/404.html"
   status = 404
