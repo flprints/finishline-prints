@@ -411,7 +411,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .partner .eyebrow i{background:var(--k7-gold)}
 .partner .h2 em{background:var(--k7-grad);color:#fff}
 .partner .lead{color:var(--k7-muted)}
-.btn--k7{background:var(--k7-grad);color:#fff;box-shadow:0 12px 32px -10px rgba(139,20,249,.7)}
+.btn--k7{background:var(--k7-grad);background-origin:border-box;background-clip:border-box;background-repeat:no-repeat;color:#fff;box-shadow:0 12px 32px -10px rgba(139,20,249,.7)}
 .btn--k7 .arr{background:#0e0a18;color:#fbc33b;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
 .partner__grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
 .partner__copy{display:grid;gap:18px;justify-items:start}
