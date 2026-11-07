@@ -1,7 +1,7 @@
 /* =========================================================
    BRAND TOKENS: the ONLY place client colours and fonts live.
    Finishline Prints: olive and red from the logo, CMYK mark colours,
-   plus a fresh lime accent (reference: Biztop / Axios landing pages)
+   plus a brighter olive accent (a lighter tone of the logo olive, replacing the earlier lime)
    used for buttons, highlights and the marquee strip.
    ========================================================= */
 :root {
@@ -10,10 +10,10 @@
   --ink-2: #1a1e13;
   --ink-3: #242a1a;
 
-  /* accent: lime (buttons, pills, highlights) */
-  --lime: #c8f04a;
-  --lime-2: #b2e02f;
-  --lime-soft: #eaf6bf;
+  /* accent: bright logo olive (buttons, pills, highlights); token names keep "lime" so studio.css needs no renames */
+  --lime: #7d8f45;
+  --lime-2: #6a7b38;
+  --lime-soft: #e3e8cf;
 
   /* light surfaces */
   --paper: #ffffff;
