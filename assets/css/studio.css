@@ -405,12 +405,29 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* Mobile menu: the .menu display:flex rule overrides the hidden attribute, so keep it truly hidden until opened (otherwise an invisible full-screen layer blocks every click, including the form) */
 .menu[hidden]{display:none}
 
-/* Konseptiv7 partner section */
+/* Konseptiv7 partner section: styled in Konseptiv7's own colours (violet-black, blue-violet-magenta gradient, gold) */
+.partner{--k7-ink:#0e0a18;--k7-grad:linear-gradient(90deg,#1a12f5 0%,#8b14f9 48%,#e40af7 100%);--k7-gold:#fbc33b;--k7-muted:#a8a4c8;background:radial-gradient(900px 520px at 90% 0%,rgba(139,20,249,.38),transparent 60%),radial-gradient(760px 520px at 0% 100%,rgba(26,18,245,.34),transparent 60%),var(--k7-ink);color:#fff}
+.partner .eyebrow{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--k7-gold)}
+.partner .eyebrow i{background:var(--k7-gold)}
+.partner .h2 em{background:var(--k7-grad);color:#fff}
+.partner .lead{color:var(--k7-muted)}
+.btn--k7{background:var(--k7-grad);color:#fff;box-shadow:0 12px 32px -10px rgba(139,20,249,.7)}
+.btn--k7 .arr{background:#fff;color:#8b14f9}
 .partner__grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
 .partner__copy{display:grid;gap:18px;justify-items:start}
-.partner__card{background:rgba(255,255,255,.06);border:1px solid var(--line-d);border-radius:28px;padding:clamp(24px,4vw,40px);display:grid;gap:18px}
-.partner__logo{width:min(300px,100%);height:auto}
-.partner__card>p{margin:0;color:var(--muted-d)}
+.partner__card{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:clamp(24px,4vw,40px);display:grid;gap:20px;overflow:hidden}
+.partner__card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--k7-grad)}
+.partner__lockup{display:flex;align-items:center;flex-wrap:wrap;gap:16px 18px}
+.partner__chip{background:#fff;border-radius:14px;padding:9px 14px;display:grid;place-items:center}
+.partner__chip img{height:40px;width:auto;display:block}
+.partner__x{font:300 2rem/1 var(--f-display);color:var(--k7-gold)}
+.partner__logo{width:min(210px,100%);height:auto}
+.partner__card>p{margin:0;color:var(--k7-muted)}
 .partner__tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-.partner__tags li{padding:8px 14px;border:1px solid var(--line-d);border-radius:999px;font-size:.85rem;color:var(--muted-d)}
+.partner__tags li{padding:8px 14px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:.85rem;color:var(--k7-muted)}
+.partner__tags li.is-hot{border-color:var(--k7-gold);color:var(--k7-gold)}
 @media (max-width:860px){.partner__grid{grid-template-columns:1fr}}
+@media (max-width:560px){.partner__lockup{flex-direction:column;align-items:flex-start;gap:6px}.partner__x{font-size:1.5rem}}
+
+/* Hide the Netlify branding badge (owner's request; harmless if the badge is also switched off in Netlify settings) */
+#nl-badge-frame{display:none!important}
